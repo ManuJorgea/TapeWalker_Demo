@@ -19,6 +19,7 @@ namespace TapeWalker.Controllers
         [SerializeField] protected bool _isGrounded;
         [SerializeField] protected bool _isFalling;
         [SerializeField] public bool _isCrouching;
+        [SerializeField] public bool _isTaking;
 
         protected Dictionary<BaseSkill, bool> _coolDownDic;
 
@@ -50,6 +51,8 @@ namespace TapeWalker.Controllers
         protected virtual void LateUpdate() { }
 
         protected virtual void Jump() { }
+
+        protected virtual void TakeVHS() { }
 
         protected virtual void Punch() { }
 

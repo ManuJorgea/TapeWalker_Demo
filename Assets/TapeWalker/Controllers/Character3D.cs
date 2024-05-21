@@ -94,6 +94,13 @@ namespace TapeWalker.Controllers
             _velocity.y = Mathf.Sqrt(_jumpForce * -2 * _gravity);
         }
 
+        /*
+        protected override void TakeVHS()
+        {
+            base.TakeVHS();
+        }
+        */
+
         protected override void FixedUpdate()
         {
             base.FixedUpdate();
