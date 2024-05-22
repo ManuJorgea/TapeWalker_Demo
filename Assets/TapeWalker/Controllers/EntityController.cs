@@ -9,7 +9,7 @@ namespace TapeWalker.Controllers
     {
         protected float _speed;
         protected float _currentSpeed;
-        protected float _jumpForce;
+        //protected float _jumpForce;
         protected float _punchForce;
         protected float _gravityMod;
 
@@ -17,9 +17,9 @@ namespace TapeWalker.Controllers
 
         [SerializeField] protected GameObject _target;
         [SerializeField] protected bool _isGrounded;
-        [SerializeField] protected bool _isFalling;
+        //[SerializeField] protected bool _isFalling;
         [SerializeField] public bool _isCrouching;
-        [SerializeField] public bool _isTaking;
+        //[SerializeField] public bool _isTaking;
 
         protected Dictionary<BaseSkill, bool> _coolDownDic;
 
@@ -27,11 +27,11 @@ namespace TapeWalker.Controllers
         protected virtual void Awake()
         {
             _speed = 10f;
-            _jumpForce = 10f;
+            //_jumpForce = 10f;
             _punchForce = 10f;
             _gravityMod = 1f;
             _isGrounded = false;
-            _isCrouching = false;
+            //_isCrouching = false;
             _coolDownDic = new Dictionary<BaseSkill, bool>();
 
             _terrainLayer = LayerMask.NameToLayer("Terrain");
