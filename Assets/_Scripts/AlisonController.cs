@@ -26,7 +26,7 @@ public class AlisonController : Character3DPlayer
 
         Vector3 speed = new(_axisH, 0, _axisV);
         _anim.SetFloat("Speed", speed.magnitude);
-        _anim.SetBool("Fall", _isFalling);
+        //_anim.SetBool("Fall", _isFalling);
         _anim.SetBool("Grounded", _isGrounded);
         _anim.SetFloat("High", _high);
         //_anim.SetFloat("TakeVHS", _takeVHS);

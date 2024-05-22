@@ -27,7 +27,7 @@ namespace TapeWalker.Controllers
             base.Awake();
             _turnSmoothTime = 0.2f;
             _turnSmoothVelocity = 0f;
-            _jumpForce = 0.03f;
+            //_jumpForce = 0.03f;
             _cc = gameObject.GetComponent<CharacterController>();
 
             if (_cc == null)
@@ -49,6 +49,7 @@ namespace TapeWalker.Controllers
             base.Update();
             _isGrounded = _cc.isGrounded;
 
+            /*
             if (_lastYPos > transform.position.y && !_isGrounded)
             {
                 if (!_isFalling)
@@ -61,7 +62,7 @@ namespace TapeWalker.Controllers
             {
                 _isFalling = false;
             }
-
+            */
         }
 
         IEnumerator HighVerify()
@@ -87,6 +88,7 @@ namespace TapeWalker.Controllers
             _cc.Move(_velocity);
         }
 
+        /*
         protected override void Jump()
         {
             base.Jump();
@@ -94,7 +96,7 @@ namespace TapeWalker.Controllers
             _velocity.y = Mathf.Sqrt(_jumpForce * -2 * _gravity);
         }
 
-        /*
+        
         protected override void TakeVHS()
         {
             base.TakeVHS();

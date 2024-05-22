@@ -33,17 +33,19 @@ namespace TapeWalker.Controllers
                 _cc.Move(moveDir.normalized * _speed * Time.deltaTime);
             }
 
+
+            /*
             if (_isGrounded && Input.GetButtonDown("Jump"))
             {
                 Jump();
             }
-
             
+
             if (_isTaking && Input.GetButtonDown("E"))
             {
                 TakeVHS();
             }
-
+            */
             
         }
 
