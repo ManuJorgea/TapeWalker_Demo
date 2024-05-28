@@ -22,6 +22,7 @@ public class JaneDowController : Character3DPlayer
 
         _tapes = 0;
         _anim = transform.Find("Animations").GetComponent<Animator>();
+        
 
         if (_anim == null)
         {

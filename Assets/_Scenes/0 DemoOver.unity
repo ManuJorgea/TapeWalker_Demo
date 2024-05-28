@@ -518,8 +518,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\xA1Gracias por la demo! Apreciamos tu apoyo. Mantente atento a futuras
-    actualizaciones para nuevas mejoras. \xA1Sigue explorando y disfrutando!"
+  m_text: "\xA1Gracias por jugar la demo! Apreciamos tu apoyo. Mantente atento a
+    futuras actualizaciones para nuevas mejoras. \xA1Sigue explorando y disfrutando!"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 665a83e2a040f064eaa4a4c3ec5e5064, type: 2}
   m_sharedMaterial: {fileID: 558275169204146916, guid: 665a83e2a040f064eaa4a4c3ec5e5064, type: 2}

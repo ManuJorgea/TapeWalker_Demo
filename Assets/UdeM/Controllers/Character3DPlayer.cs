@@ -14,12 +14,16 @@ namespace UdeM.Controllers {
         protected bool _hasBeenAttacked;
         protected int _hp;
         [SerializeField] protected GameObject particulas2;
+        AudioSource breakingHeart;
+        AudioSource breakingBottle;
 
         protected override void Start()
         {
             base.Start();
             _hasBeenAttacked = false;
             _hp = 3;
+            breakingHeart = GetComponent<AudioSource>();
+            breakingBottle = GameObject.Find("BreakingBottle").GetComponent<AudioSource>();
         }
 
         protected override void Update()
@@ -57,6 +61,7 @@ namespace UdeM.Controllers {
         public void GetDamage(BaseSkill skill)
         {
             StartCoroutine(MeleeDmg());
+            
         }
 
         public void GetDamageRange(BaseSkill skill)
@@ -69,6 +74,7 @@ namespace UdeM.Controllers {
             _speed = 3f;
             GameObject _particulas = Instantiate(particulas, transform.position, Quaternion.identity);
             _particulas.transform.position = transform.position;
+            breakingBottle.Play();
             yield return new WaitForSeconds(5f);
             _speed = 10f;
         }
@@ -80,6 +86,7 @@ namespace UdeM.Controllers {
                 _hasBeenAttacked = true;
                 _hp = _hp-1;
                 Instantiate(particulas2, transform.position, Quaternion.identity);
+                breakingHeart.Play();
                 yield return new WaitForSeconds(3f);
                 _hasBeenAttacked = false;
 
