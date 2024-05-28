@@ -8,11 +8,15 @@ public class CanvasController : MonoBehaviour
     public void StartMenu()
     {
         SceneManager.LoadScene("0 Menu");
+        juegoPausado = false;
+        Time.timeScale = 1;
     }
 
     public void PlayLevel()
     {
         SceneManager.LoadScene("4 Lair On");
+        juegoPausado = false;
+        Time.timeScale = 1;
     }
 
     public void QuitGame()
