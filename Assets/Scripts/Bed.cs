@@ -15,7 +15,7 @@ public class Bed : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            SceneManager.LoadScene("4 Lair On");
+            SceneManager.LoadScene("0 DemoOver");
         }
     }
 }
